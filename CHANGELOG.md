@@ -8,9 +8,11 @@ This project follows a simplified version of Semantic Versioning.
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-01-28
+
 ### Added
 
-- **develop** - Added changelog
+- Added changelog
 
 
 ### Changed
@@ -19,7 +21,6 @@ This project follows a simplified version of Semantic Versioning.
 
 ---
 
-## [0.1.0] - 2026-01-28
 ### Added
 - Initial project setup with Vite + React + TypeScript
 - Block-based rendering engine
