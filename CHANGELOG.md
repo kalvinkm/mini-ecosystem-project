@@ -7,7 +7,12 @@ This project follows a simplified version of Semantic Versioning.
 ---
 
 ## [Unreleased]
+
 ### Added
+
+- **develop** - Added changelog
+
+
 ### Changed
 ### Fixed
 ### Removed
