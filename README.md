@@ -1,73 +1,118 @@
-# React + TypeScript + Vite
+# 🛒 Mini Ecosystem Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini plataforma experimental para construção de lojas e páginas dinâmicas utilizando React, TypeScript e configuração via JSON.
 
-Currently, two official plugins are available:
+Este projeto implementa uma **engine de renderização baseada em blocos**, inspirada em plataformas como VTEX IO, permitindo estruturar layouts sem alterar código.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Objetivo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Criar um ecossistema modular onde a interface da loja é definida por arquivos de configuração, promovendo:
 
-## Expanding the ESLint configuration
+- Separação entre layout e código
+- Escalabilidade
+- Reuso de componentes
+- Evolução incremental da plataforma
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 Arquitetura
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O projeto segue uma abordagem **config-driven**:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## pages.json → parser → engine → renderer → UI
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Componentes principais:
+
+- **Config (JSON)**: Define a estrutura das páginas
+- **Parser**: Valida e normaliza os dados
+- **Registry**: Mapeia tipos para componentes
+- **Renderer**: Renderiza dinamicamente os blocos
+
+---
+
+## 📦 Blocos disponíveis
+
+Atualmente suportados:
+
+- Header
+- Banner
+- Footer
+
+Novos blocos podem ser adicionados via registry.
+
+---
+
+## ⚙️ Tecnologias
+
+- React
+- TypeScript
+- Vite
+- ESLint
+- Prettier
+
+---
+
+## ▶️ Como executar
+
+### Pré-requisitos
+
+- Node.js >= 18
+- npm
+
+### Instalação
+
+```bash
+npm install
+````
+
+### Rodar em desenvolvimento
+
+````
+npm run dev
+````
+
+### Acesse:
+
+````
+http://localhost:5173
+````
+
+## 🛠️ Estrutura do projeto
+
+src/
+  components/   # Blocos visuais
+  engine/       # Núcleo da plataforma
+  config/       # Configurações JSON
+
+
+## 📈 Versionamento
+
+O projeto segue uma versão simplificada de Semantic Versioning.
+
+Detalhes em:
+
+CHANGELOG.md
+
+## 🌱 Roadmap (Próximos passos)
+
+- Suporte a múltiplas páginas
+
+- Sistema de temas
+
+- Validação com schema
+
+- Editor visual
+
+- CMS integrado
+
+## 👨‍💻 Autor
+
+Kalvin Melo
+
+Projeto desenvolvido para estudo avançado de arquitetura frontend e engenharia de software.
+
+
