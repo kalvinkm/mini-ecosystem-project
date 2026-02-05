@@ -1,0 +1,27 @@
+{
+  "home": {
+    "blocks": [
+      {
+        "type": "header",
+        "props": {
+          "title": "Minha Loja Experimental",
+          "subtitle": "Ofertas da semana"
+        }
+      },
+      {
+        "type": "banner",
+        "props": {
+          "text": "Bem-vindo ao meu mini ecossistema",
+          "variant": "highlight"
+        }
+      },
+      {
+        "type": "footer",
+        "props": {
+          "year": 2026,
+          "text": "Mini Ecosystem"
+        }
+      }
+    ]
+  }
+}
