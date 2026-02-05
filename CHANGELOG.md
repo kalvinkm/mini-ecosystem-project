@@ -8,20 +8,24 @@ This project follows a simplified version of Semantic Versioning.
 
 ## [Unreleased]
 
+- **store-engine-20260129** - Creating the store engine and components
+
 ## [0.1.0] - 2026-01-28
 
 ### Added
 
 - Added changelog
 
-
 ### Changed
+
 ### Fixed
+
 ### Removed
 
 ---
 
 ### Added
+
 - Initial project setup with Vite + React + TypeScript
 - Block-based rendering engine
 - JSON-driven layout system
@@ -30,9 +34,11 @@ This project follows a simplified version of Semantic Versioning.
 - Runtime validation for config files
 
 ### Changed
+
 - Implemented typed block system using TypeScript unions
 
 ### Fixed
+
 - Type safety issues with dynamic block rendering
 
 ---
