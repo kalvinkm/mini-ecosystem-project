@@ -1,3 +1,5 @@
+import './Footer.css'
+
 interface FooterProps {
   year: number
   text?: string
@@ -5,7 +7,7 @@ interface FooterProps {
 
 export function Footer({ year, text }: FooterProps) {
   return (
-    <footer>
+    <footer className="footer-store">
       <p>
         © {year} {text}
       </p>
