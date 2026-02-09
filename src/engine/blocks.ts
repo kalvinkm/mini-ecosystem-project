@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { ComponentType } from 'react'
 
-import { Header } from '../components/Header'
+import { Header } from '../components/header/Header'
 import { Banner } from '../components/Banner'
-import { Footer } from '../components/Footer'
+import { Footer } from '../components/footer/Footer'
 
 export const blocks: Record<string, ComponentType<any>> = {
   header: Header,
